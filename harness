@@ -1,0 +1,33 @@
+Outline
+3PD DATA
+HARNESS
+MVR WORKING
+MVR DEV IN HARNESS
+
+Custom Data Setup
+Previously we were using the third party data for testing purpose. For example for Auto for a New Business Issue we needed the following reports.
+
+Information	Report	Vendor
+Valid Insurance Score	Credit	TransUnion
+Dirty/Clean Driving History	DriverRisk	TU-Aplus
+
+Accident History	MVR	Lexis Nexis
+Multiple Driver in Family	ADD Driver	Acxiom
+Continues Coverage	Insurance History	Acxiom
+	CLUE A	Lexis Nexis
+	CLUE P	ISO
+		
+Now we see here that not all this reports are coming from one place.
+	
+  MVR WORKING
+Now getting to MVR Reports/ Driving Reports.
+How we usually order MVR after RC2. Instead of fetching the Data from Lexis, For testing purpose, we can get the same results from Harness.
+Show LN portal. Show how MVR is fetched according to our testing requirements. Show an MVR Report. 
+We can extracted a dump for any set of scenarios. We are aware of the auto charecteristics that are required for ordering an MVR report like the License number the date of birth and the VIN.
+
+As MVR report.is mandatory for every driver prior issuance. And it could also be possible that the QA team requires certain set of accidents or violations against a driver. And it’s not available with Lexis. One way is that we can set up Data and provide it to the Vendor. But each vendor has its own test environment to provide test data/ reports for QA and this data is entirely different across all vendors.
+
+Third Party Data Setup by TDm is volatile due to processes internal to the vendor  like batch, refresh etc.
+So we cannot be sure whether the data we setup for a certain scenario will continue to work or not post few months.
+
+1.	
